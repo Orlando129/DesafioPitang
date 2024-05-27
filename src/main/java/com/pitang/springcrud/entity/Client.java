@@ -30,7 +30,11 @@ public class Client {
     private String nome;
     private String cnpj;
     private String webhook;
+    private String endereco;
+    private String email;
+    private String telefone;
     private int creditoPagina;
+
 
     @Length(max = 10)
     @Pattern(regexp = "Ativo|Inativo")
