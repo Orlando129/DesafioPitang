@@ -27,13 +27,19 @@ public class Client {
     @UuidGenerator(style = UuidGenerator.Style.RANDOM)
     @NotNull
     private UUID apiKey;
-    private String nome;
-    private String cnpj;
+    @Column(name = "nome")
+    private String nomeCliente;
+    @Column(name = "cnpj")
+    private String cnpjCliente;
     private String webhook;
-    private String endereco;
-    private String email;
-    private String telefone;
-    private int creditoPagina;
+    @Column(name = "endereco")
+    private String enderecoCliente;
+    @Column(name = "email")
+    private String emailCliente;
+    @Column(name = "telefone")
+    private String telefoneCliente;
+    @Column(name = "credito_pagina")
+    private int creditosPaginas;
 
 
     @Length(max = 10)
