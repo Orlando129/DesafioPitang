@@ -25,7 +25,6 @@ public class Client {
     private UUID id;
 
     @UuidGenerator(style = UuidGenerator.Style.RANDOM)
-    @NotNull
     private UUID apiKey;
     @Column(name = "nome")
     private String nomeCliente;
