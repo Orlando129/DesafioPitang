@@ -22,7 +22,7 @@ MySQL
 
 ## Configuração do Banco de Dados
 
-Crie um banco de dados MySQL e configure as credenciais no arquivo application.yml:
+Crie um banco de dados MySQL e configure as credenciais no arquivo application.properties:
 
 ```
 server:
@@ -58,6 +58,8 @@ cd seu-repositorio
 ```
 
 Compile e execute a aplicação
+
+Ou você pode colar https://desafiopitang-production.up.railway.app + endpoints dentro do seu postman ou insomnia
 
 ## Bibliotecas Utilizadas
 
@@ -133,13 +135,23 @@ Compile e execute a aplicação
 ```
 ## Endpoints
 
-### Clientes
+### Clientes 
+
+#### OBS: Para utilizar os endpoints do cliente é necessario fazer o login primeiramente e colar o seu token adquirido em "Authorization" e "Type = Bear Token"
 
 **Adicionar Cliente**
 
 * URL: /client/add
 * Método: POST
-* Corpo: JSON com os detalhes do cliente
+* Corpo: ```{
+        "nomeCliente": "",
+        "cnpjCliente": "",
+        "webhook": "",
+        "enderecoCliente": "",
+        "emailCliente": "",
+        "telefoneCliente": "",
+        "creditosPaginas":
+} ```
 
 **Listar Clientes**
 
@@ -156,17 +168,28 @@ Compile e execute a aplicação
 
 * URL: /client/update/{id}
 * Método: PUT
-* Corpo: JSON com os novos detalhes do cliente
+* Corpo: ```{
+        "apiKey": "",
+        "nomeCliente": "",
+        "cnpjCliente": "",
+        "webhook": "",
+        "enderecoCliente": "",
+        "emailCliente": "",
+        "telefoneCliente": "",
+        "creditosPaginas": 
+}```
 
 **Deletar Cliente**
 
 * URL: /client/delete/{id}
 * Método: DELETE
+* Parâmetro: id (UUID)
 
 **Reativar Cliente** 
 
 * URL: /client/activate/{id}
 * Método: PATCH
+* Parâmetro: id (UUID)
 
 ### Administradores
 
@@ -174,14 +197,26 @@ Compile e execute a aplicação
 
 * URL: /login
 * Método: POST
-* Corpo: JSON com os detalhes do administrador
+* Corpo: ```{
+    "username": "",
+    "password": ""
+} ```
 
 **Logout Administrador**
 
 * URL: /logout
 * Método: GET
-* Corpo: JSON com os detalhes do administrador
+* Corpo: Colar o Token no "Authorization, type =Bear Token"
 
+**Register Administrador**
+*URL:/register
+* Método: POST
+* Corpo: ```{
+    "username": "",
+    "password": "",
+    "role": "ADMIN"
+} ```
+  
 ## Licença
 
 Este projeto está licenciado sob os termos da licença MIT.
