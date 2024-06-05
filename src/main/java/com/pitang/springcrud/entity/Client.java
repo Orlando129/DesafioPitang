@@ -22,7 +22,6 @@ public class Client {
 
     @Id
     @UuidGenerator(style = UuidGenerator.Style.RANDOM)
-    @Column(name = "id")
     private UUID id;
 
     @UuidGenerator(style = UuidGenerator.Style.RANDOM)
