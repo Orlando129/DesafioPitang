@@ -34,6 +34,8 @@ public class Client {
     private String cnpjCliente;
     @Column(name = "webhook")
     private String webhook;
+    @Column(name = "responsavel")
+    private String responsavel;
     @Column(name = "endereco")
     private String enderecoCliente;
     @Column(name = "email")
@@ -42,6 +44,7 @@ public class Client {
     private String telefoneCliente;
     @Column(name = "credito_pagina")
     private int creditosPaginas;
+
 
 
     @Length(max = 10)
