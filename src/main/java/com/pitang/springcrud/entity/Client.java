@@ -22,14 +22,17 @@ public class Client {
 
     @Id
     @UuidGenerator(style = UuidGenerator.Style.RANDOM)
+    @Column(name = "id")
     private UUID id;
 
     @UuidGenerator(style = UuidGenerator.Style.RANDOM)
+    @Column(name = "apiKey")
     private UUID apiKey;
     @Column(name = "nome")
     private String nomeCliente;
     @Column(name = "cnpj")
     private String cnpjCliente;
+    @Column(name = "webhook")
     private String webhook;
     @Column(name = "endereco")
     private String enderecoCliente;
