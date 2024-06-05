@@ -22,7 +22,7 @@ MySQL
 
 ## Configuração do Banco de Dados
 
-Crie um banco de dados MySQL e configure as credenciais no arquivo application.yml:
+Crie um banco de dados MySQL e configure as credenciais no arquivo application.properties:
 
 ```
 server:
