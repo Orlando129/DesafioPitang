@@ -33,8 +33,6 @@ public class Client {
     private String cnpjCliente;
     @Column(name = "webhook")
     private String webhook;
-    @Column(name = "responsavel")
-    private String responsavel;
     @Column(name = "endereco")
     private String enderecoCliente;
     @Column(name = "email")
