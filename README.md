@@ -25,22 +25,12 @@ MySQL
 Crie um banco de dados MySQL e configure as credenciais no arquivo application.properties:
 
 ```
-server:
-  port: 8081
-  error:
-    include-message: always
-
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: seu_usuario
-    url: jdbc:mysql://localhost:3306/nome_do_seu_banco_de_dados
-    password: sua_senha
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    open-in-view: true
+spring.datasource.url=jdbc:mysql://localhost:3306/nome_do_seu_banco_de_dados
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.open-in-view=true
 ```
 
 ## Executando a Aplicação
@@ -147,6 +137,7 @@ Ou você pode colar https://desafiopitang-production.up.railway.app + endpoints 
         "nomeCliente": "",
         "cnpjCliente": "",
         "webhook": "",
+  	"responsavel": "",
         "enderecoCliente": "",
         "emailCliente": "",
         "telefoneCliente": "",
@@ -174,6 +165,7 @@ Ou você pode colar https://desafiopitang-production.up.railway.app + endpoints 
         "cnpjCliente": "",
         "webhook": "",
         "enderecoCliente": "",
+  	"responsavel": "",
         "emailCliente": "",
         "telefoneCliente": "",
         "creditosPaginas": 
